@@ -73,7 +73,7 @@ exports[`InfraStack > should match snapshot 1`] = `
                   "Version": "1",
                 },
                 "Configuration": {
-                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"9846e726ec481ed25679c0170187f40b4920586fd0e7314d24f56620d9f53f5b"}]",
+                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"d980915f1637b7bf978ee66622b666802595f191c0068f7e270de5beb71febc8"}]",
                   "ProjectName": {
                     "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6",
                   },
@@ -234,6 +234,7 @@ exports[`InfraStack > should match snapshot 1`] = `
   "phases": {
     "build": {
       "commands": [
+        "cd infra",
         "npm ci",
         "npm run build",
         "npx cdk synth"
@@ -241,7 +242,7 @@ exports[`InfraStack > should match snapshot 1`] = `
     }
   },
   "artifacts": {
-    "base-directory": "cdk.out",
+    "base-directory": "infra/cdk.out",
     "files": "**/*"
   }
 }",

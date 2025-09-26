@@ -9,6 +9,7 @@
     "watch": "tsc -w",
     "cdk": "cdk",
     "test": "vitest run",
+    "test:update": "vitest run --update",
     "lint": "biome lint --diagnostic-level=error --write",
     "format": "biome format . --write"
   },

@@ -16,7 +16,8 @@ export class InfraPipelineStack extends cdk.Stack {
               "arn:aws:codeconnections:eu-central-1:243652179693:connection/7c89172f-833d-4291-a18a-44800bed2bf6",
           },
         ),
-        commands: ["npm ci", "npm run build", "npx cdk synth"],
+        commands: ["cd infra", "npm ci", "npm run build", "npx cdk synth"],
+        primaryOutputDirectory: "infra/cdk.out",
       }),
     });
   }
