@@ -73,7 +73,7 @@ exports[`InfraStack > should match snapshot 1`] = `
                   "Version": "1",
                 },
                 "Configuration": {
-                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"d980915f1637b7bf978ee66622b666802595f191c0068f7e270de5beb71febc8"}]",
+                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"2d126ace3c482676d34695ece9b5db22cc9513ecb45e01e44927e8601c1165d1"}]",
                   "ProjectName": {
                     "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6",
                   },
@@ -110,7 +110,7 @@ exports[`InfraStack > should match snapshot 1`] = `
                   "Version": "1",
                 },
                 "Configuration": {
-                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"08920c57bed57d90c3ffb3813ad4596e66091f970896882ec0af67fd5e1b80c5"}]",
+                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"c20a0154d437573a8d59dcbcd1e1012f94e41055a699b1ca6e9a156f4e803cd8"}]",
                   "ProjectName": {
                     "Ref": "PipelineUpdatePipelineSelfMutationDAA41400",
                   },
@@ -216,11 +216,10 @@ exports[`InfraStack > should match snapshot 1`] = `
         "Description": "Pipeline step MyTestStack/Pipeline/Build/Synth",
         "EncryptionKey": "alias/aws/s3",
         "Environment": {
-          "ComputeType": "BUILD_GENERAL1_SMALL",
-          "Image": "aws/codebuild/standard:7.0",
-          "ImagePullCredentialsType": "CODEBUILD",
+          "ComputeType": "BUILD_LAMBDA_1GB",
+          "Image": "aws/codebuild/amazonlinux-aarch64-lambda-standard:nodejs22",
           "PrivilegedMode": false,
-          "Type": "LINUX_CONTAINER",
+          "Type": "ARM_LAMBDA_CONTAINER",
         },
         "ServiceRole": {
           "Fn::GetAtt": [
@@ -680,11 +679,10 @@ exports[`InfraStack > should match snapshot 1`] = `
         "Description": "Pipeline step MyTestStack/Pipeline/UpdatePipeline/SelfMutate",
         "EncryptionKey": "alias/aws/s3",
         "Environment": {
-          "ComputeType": "BUILD_GENERAL1_SMALL",
-          "Image": "aws/codebuild/standard:7.0",
-          "ImagePullCredentialsType": "CODEBUILD",
+          "ComputeType": "BUILD_LAMBDA_1GB",
+          "Image": "aws/codebuild/amazonlinux-aarch64-lambda-standard:nodejs22",
           "PrivilegedMode": false,
-          "Type": "LINUX_CONTAINER",
+          "Type": "ARM_LAMBDA_CONTAINER",
         },
         "Name": "MyAppPipeline-selfupdate",
         "ServiceRole": {

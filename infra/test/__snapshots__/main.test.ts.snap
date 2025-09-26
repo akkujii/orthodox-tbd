@@ -73,7 +73,7 @@ exports[`CDK Application stacks > should match snapshots > for InfraPipelineStac
                   "Version": "1",
                 },
                 "Configuration": {
-                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"d980915f1637b7bf978ee66622b666802595f191c0068f7e270de5beb71febc8"}]",
+                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"2d126ace3c482676d34695ece9b5db22cc9513ecb45e01e44927e8601c1165d1"}]",
                   "ProjectName": {
                     "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6",
                   },
@@ -110,7 +110,7 @@ exports[`CDK Application stacks > should match snapshots > for InfraPipelineStac
                   "Version": "1",
                 },
                 "Configuration": {
-                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"f3aca7f4067fd5c1ff29316060945d61cc6f543719579d39901b1c4e97e78eb7"}]",
+                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"83b2b5eef78c7c4d96b80f89c3e9a41f767a306fa180c8e65aa5774716ea0b11"}]",
                   "ProjectName": {
                     "Ref": "PipelineUpdatePipelineSelfMutationDAA41400",
                   },
@@ -216,11 +216,10 @@ exports[`CDK Application stacks > should match snapshots > for InfraPipelineStac
         "Description": "Pipeline step InfraPipelineStack/Pipeline/Build/Synth",
         "EncryptionKey": "alias/aws/s3",
         "Environment": {
-          "ComputeType": "BUILD_GENERAL1_SMALL",
-          "Image": "aws/codebuild/standard:7.0",
-          "ImagePullCredentialsType": "CODEBUILD",
+          "ComputeType": "BUILD_LAMBDA_1GB",
+          "Image": "aws/codebuild/amazonlinux-aarch64-lambda-standard:nodejs22",
           "PrivilegedMode": false,
-          "Type": "LINUX_CONTAINER",
+          "Type": "ARM_LAMBDA_CONTAINER",
         },
         "ServiceRole": {
           "Fn::GetAtt": [
@@ -656,11 +655,10 @@ exports[`CDK Application stacks > should match snapshots > for InfraPipelineStac
         "Description": "Pipeline step InfraPipelineStack/Pipeline/UpdatePipeline/SelfMutate",
         "EncryptionKey": "alias/aws/s3",
         "Environment": {
-          "ComputeType": "BUILD_GENERAL1_SMALL",
-          "Image": "aws/codebuild/standard:7.0",
-          "ImagePullCredentialsType": "CODEBUILD",
+          "ComputeType": "BUILD_LAMBDA_1GB",
+          "Image": "aws/codebuild/amazonlinux-aarch64-lambda-standard:nodejs22",
           "PrivilegedMode": false,
-          "Type": "LINUX_CONTAINER",
+          "Type": "ARM_LAMBDA_CONTAINER",
         },
         "Name": "MyAppPipeline-selfupdate",
         "ServiceRole": {

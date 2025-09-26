@@ -7,6 +7,12 @@ export class InfraPipelineStack extends cdk.Stack {
 
     new cdk.pipelines.CodePipeline(this, "Pipeline", {
       pipelineName: "MyAppPipeline",
+      codeBuildDefaults: {
+        buildEnvironment: {
+          computeType: cdk.aws_codebuild.ComputeType.LAMBDA_1GB,
+          buildImage: cdk.aws_codebuild.LinuxArmLambdaBuildImage.AMAZON_LINUX_2023_NODE_22,
+        }
+      },
       synth: new cdk.pipelines.ShellStep("Synth", {
         input: cdk.pipelines.CodePipelineSource.connection(
           "akkujii/orthodox-tbd",
