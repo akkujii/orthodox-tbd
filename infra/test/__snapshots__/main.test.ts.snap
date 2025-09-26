@@ -73,7 +73,7 @@ exports[`CDK Application stacks > should match snapshots > for InfraPipelineStac
                   "Version": "1",
                 },
                 "Configuration": {
-                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"ebc9892d5ddc1c854dd85de47beca71349d2eaf1447f4bac19e181c155922d31"}]",
+                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"28e9a3cb05a00b11bed3d4e6ec2122d6cc3e3c839057c6a1b69a2795bb3524c5"}]",
                   "ProjectName": {
                     "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6",
                   },
@@ -110,7 +110,7 @@ exports[`CDK Application stacks > should match snapshots > for InfraPipelineStac
                   "Version": "1",
                 },
                 "Configuration": {
-                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"c947f91eec16e15212347e8da2258c6b1bc6b455590ab0866fbb4266a206bd93"}]",
+                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"e93a7078224e3f8853c44458ee9c810b90e806670ce852664f7e520bab862cc5"}]",
                   "ProjectName": {
                     "Ref": "PipelineUpdatePipelineSelfMutationDAA41400",
                   },
@@ -216,7 +216,7 @@ exports[`CDK Application stacks > should match snapshots > for InfraPipelineStac
         "Description": "Pipeline step InfraPipelineStack/Pipeline/Build/Synth",
         "EncryptionKey": "alias/aws/s3",
         "Environment": {
-          "ComputeType": "BUILD_LAMBDA_4GB",
+          "ComputeType": "BUILD_LAMBDA_2GB",
           "Image": "aws/codebuild/amazonlinux-aarch64-lambda-standard:nodejs22",
           "PrivilegedMode": false,
           "Type": "ARM_LAMBDA_CONTAINER",
@@ -655,7 +655,7 @@ exports[`CDK Application stacks > should match snapshots > for InfraPipelineStac
         "Description": "Pipeline step InfraPipelineStack/Pipeline/UpdatePipeline/SelfMutate",
         "EncryptionKey": "alias/aws/s3",
         "Environment": {
-          "ComputeType": "BUILD_LAMBDA_4GB",
+          "ComputeType": "BUILD_LAMBDA_2GB",
           "Image": "aws/codebuild/amazonlinux-aarch64-lambda-standard:nodejs22",
           "PrivilegedMode": false,
           "Type": "ARM_LAMBDA_CONTAINER",
