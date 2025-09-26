@@ -9,7 +9,7 @@ export class InfraPipelineStack extends cdk.Stack {
       pipelineName: "MyAppPipeline",
       codeBuildDefaults: {
         buildEnvironment: {
-          computeType: cdk.aws_codebuild.ComputeType.LAMBDA_1GB,
+          computeType: cdk.aws_codebuild.ComputeType.LAMBDA_2GB,
           buildImage: cdk.aws_codebuild.LinuxArmLambdaBuildImage.AMAZON_LINUX_2023_NODE_22,
         }
       },
