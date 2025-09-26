@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`InfraStack > should match snapshot 1`] = `
+exports[`CDK Application stacks > should match snapshots > for InfraPipelineStack 1`] = `
 {
   "Parameters": {
     "BootstrapVersion": {
@@ -110,7 +110,7 @@ exports[`InfraStack > should match snapshot 1`] = `
                   "Version": "1",
                 },
                 "Configuration": {
-                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"08920c57bed57d90c3ffb3813ad4596e66091f970896882ec0af67fd5e1b80c5"}]",
+                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"f3aca7f4067fd5c1ff29316060945d61cc6f543719579d39901b1c4e97e78eb7"}]",
                   "ProjectName": {
                     "Ref": "PipelineUpdatePipelineSelfMutationDAA41400",
                   },
@@ -213,7 +213,7 @@ exports[`InfraStack > should match snapshot 1`] = `
         "Cache": {
           "Type": "NO_CACHE",
         },
-        "Description": "Pipeline step MyTestStack/Pipeline/Build/Synth",
+        "Description": "Pipeline step InfraPipelineStack/Pipeline/Build/Synth",
         "EncryptionKey": "alias/aws/s3",
         "Environment": {
           "ComputeType": "BUILD_GENERAL1_SMALL",
@@ -287,15 +287,7 @@ exports[`InfraStack > should match snapshot 1`] = `
                       {
                         "Ref": "AWS::Partition",
                       },
-                      ":logs:",
-                      {
-                        "Ref": "AWS::Region",
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId",
-                      },
-                      ":log-group:/aws/codebuild/",
+                      ":logs:eu-central-1:243652179693:log-group:/aws/codebuild/",
                       {
                         "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6",
                       },
@@ -310,15 +302,7 @@ exports[`InfraStack > should match snapshot 1`] = `
                       {
                         "Ref": "AWS::Partition",
                       },
-                      ":logs:",
-                      {
-                        "Ref": "AWS::Region",
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId",
-                      },
-                      ":log-group:/aws/codebuild/",
+                      ":logs:eu-central-1:243652179693:log-group:/aws/codebuild/",
                       {
                         "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6",
                       },
@@ -345,15 +329,7 @@ exports[`InfraStack > should match snapshot 1`] = `
                     {
                       "Ref": "AWS::Partition",
                     },
-                    ":codebuild:",
-                    {
-                      "Ref": "AWS::Region",
-                    },
-                    ":",
-                    {
-                      "Ref": "AWS::AccountId",
-                    },
-                    ":report-group/",
+                    ":codebuild:eu-central-1:243652179693:report-group/",
                     {
                       "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6",
                     },
@@ -676,7 +652,7 @@ exports[`InfraStack > should match snapshot 1`] = `
         "Cache": {
           "Type": "NO_CACHE",
         },
-        "Description": "Pipeline step MyTestStack/Pipeline/UpdatePipeline/SelfMutate",
+        "Description": "Pipeline step InfraPipelineStack/Pipeline/UpdatePipeline/SelfMutate",
         "EncryptionKey": "alias/aws/s3",
         "Environment": {
           "ComputeType": "BUILD_GENERAL1_SMALL",
@@ -703,7 +679,7 @@ exports[`InfraStack > should match snapshot 1`] = `
     },
     "build": {
       "commands": [
-        "cdk -a . deploy MyTestStack --require-approval=never --verbose"
+        "cdk -a . deploy InfraPipelineStack --require-approval=never --verbose"
       ]
     }
   }
@@ -750,15 +726,7 @@ exports[`InfraStack > should match snapshot 1`] = `
                       {
                         "Ref": "AWS::Partition",
                       },
-                      ":logs:",
-                      {
-                        "Ref": "AWS::Region",
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId",
-                      },
-                      ":log-group:/aws/codebuild/",
+                      ":logs:eu-central-1:243652179693:log-group:/aws/codebuild/",
                       {
                         "Ref": "PipelineUpdatePipelineSelfMutationDAA41400",
                       },
@@ -773,15 +741,7 @@ exports[`InfraStack > should match snapshot 1`] = `
                       {
                         "Ref": "AWS::Partition",
                       },
-                      ":logs:",
-                      {
-                        "Ref": "AWS::Region",
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId",
-                      },
-                      ":log-group:/aws/codebuild/",
+                      ":logs:eu-central-1:243652179693:log-group:/aws/codebuild/",
                       {
                         "Ref": "PipelineUpdatePipelineSelfMutationDAA41400",
                       },
@@ -808,15 +768,7 @@ exports[`InfraStack > should match snapshot 1`] = `
                     {
                       "Ref": "AWS::Partition",
                     },
-                    ":codebuild:",
-                    {
-                      "Ref": "AWS::Region",
-                    },
-                    ":",
-                    {
-                      "Ref": "AWS::AccountId",
-                    },
-                    ":report-group/",
+                    ":codebuild:eu-central-1:243652179693:report-group/",
                     {
                       "Ref": "PipelineUpdatePipelineSelfMutationDAA41400",
                     },
@@ -837,18 +789,7 @@ exports[`InfraStack > should match snapshot 1`] = `
                 },
               },
               "Effect": "Allow",
-              "Resource": {
-                "Fn::Join": [
-                  "",
-                  [
-                    "arn:*:iam::",
-                    {
-                      "Ref": "AWS::AccountId",
-                    },
-                    ":role/*",
-                  ],
-                ],
-              },
+              "Resource": "arn:*:iam::243652179693:role/*",
             },
             {
               "Action": "cloudformation:DescribeStacks",

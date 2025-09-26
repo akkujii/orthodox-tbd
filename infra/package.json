@@ -9,8 +9,8 @@
     "watch": "tsc -w",
     "cdk": "cdk",
     "test": "vitest run",
-    "lint": "biome lint --diagnostic-level=error",
-    "format": "biome format ."
+    "lint": "biome lint --diagnostic-level=error --write",
+    "format": "biome format . --write"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.4",
