@@ -73,7 +73,7 @@ exports[`InfraStack > should match snapshot 1`] = `
                   "Version": "1",
                 },
                 "Configuration": {
-                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"28e9a3cb05a00b11bed3d4e6ec2122d6cc3e3c839057c6a1b69a2795bb3524c5"}]",
+                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"ebc9892d5ddc1c854dd85de47beca71349d2eaf1447f4bac19e181c155922d31"}]",
                   "ProjectName": {
                     "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6",
                   },
@@ -110,7 +110,7 @@ exports[`InfraStack > should match snapshot 1`] = `
                   "Version": "1",
                 },
                 "Configuration": {
-                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"bcddc8ca5224d1aec43076b1ee0ae0fa128cdc9d27c8ab2180b6868ebd7431bd"}]",
+                  "EnvironmentVariables": "[{"name":"_PROJECT_CONFIG_HASH","type":"PLAINTEXT","value":"31584ef6a38f54cdde22c004d42d0b52c2c5c8cd3b23e241298b2eebf0b81592"}]",
                   "ProjectName": {
                     "Ref": "PipelineUpdatePipelineSelfMutationDAA41400",
                   },
@@ -216,7 +216,7 @@ exports[`InfraStack > should match snapshot 1`] = `
         "Description": "Pipeline step MyTestStack/Pipeline/Build/Synth",
         "EncryptionKey": "alias/aws/s3",
         "Environment": {
-          "ComputeType": "BUILD_LAMBDA_2GB",
+          "ComputeType": "BUILD_LAMBDA_4GB",
           "Image": "aws/codebuild/amazonlinux-aarch64-lambda-standard:nodejs22",
           "PrivilegedMode": false,
           "Type": "ARM_LAMBDA_CONTAINER",
@@ -679,7 +679,7 @@ exports[`InfraStack > should match snapshot 1`] = `
         "Description": "Pipeline step MyTestStack/Pipeline/UpdatePipeline/SelfMutate",
         "EncryptionKey": "alias/aws/s3",
         "Environment": {
-          "ComputeType": "BUILD_LAMBDA_2GB",
+          "ComputeType": "BUILD_LAMBDA_4GB",
           "Image": "aws/codebuild/amazonlinux-aarch64-lambda-standard:nodejs22",
           "PrivilegedMode": false,
           "Type": "ARM_LAMBDA_CONTAINER",
